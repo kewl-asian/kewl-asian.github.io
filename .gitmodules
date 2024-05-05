@@ -20,7 +20,7 @@
 
 [submodule "vendor/psr/http-factory"]
     path = vendor/psr/http-factory
-    url = http://git.fsiat.com/Ryan/post-api.git
+    url = https://github.com/php-fig/http-factory.git
 
 [submodule "vendor/psr/http-message"]
     path = vendor/psr/http-message
