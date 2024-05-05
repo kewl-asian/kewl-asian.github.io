@@ -13,3 +13,23 @@
 [submodule "vendor/phpmailer/phpmailer"]
     path = vendor/phpmailer/phpmailer
     url = https://github.com/PHPMailer/PHPMailer.git
+
+[submodule "vendor/psr/http-client"]
+    path = vendor/psr/http-client
+    url = https://github.com/php-fig/http-client.git
+
+[submodule "vendor/psr/http-factory"]
+    path = vendor/psr/http-factory
+    url = http://git.fsiat.com/Ryan/post-api.git
+
+[submodule "vendor/psr/http-message"]
+    path = vendor/psr/http-message
+    url = https://github.com/php-fig/http-message.git
+
+[submodule "vendor/ralouphie/getallheaders"]
+    path = vendor/ralouphie/getallheaders
+    url = https://github.com/ralouphie/getallheaders.git
+
+[submodule "vendor/symfony/deprecation-contracts"]
+    path = vendor/symfony/deprecation-contracts
+    url = https://github.com/symfony/deprecation-contracts.git
