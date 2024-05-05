@@ -4,11 +4,11 @@
 
 [submodule "vendor/guzzlehttp/promises"]
     path = vendor/guzzlehttp/promises
-    url = https://github.com/guzzle/guzzle.git
+    url = https://github.com/guzzle/promises.git
 
 [submodule "vendor/guzzlehttp/psr7"]
     path = vendor/guzzlehttp/psr7
-    url = https://github.com/guzzle/guzzle.git
+    url = https://github.com/guzzle/psr7.git
 
 [submodule "vendor/phpmailer/phpmailer"]
     path = vendor/phpmailer/phpmailer
