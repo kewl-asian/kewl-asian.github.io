@@ -1,3 +1,7 @@
 [submodule "vendor/guzzlehttp/guzzle"]
     path = vendor/guzzlehttp/guzzle
     url = https://github.com/guzzle/guzzle.git
+
+[submodule "vendor/guzzlehttp/promises"]
+    path = vendor/guzzlehttp/promises
+    url = https://github.com/guzzle/guzzle.git
