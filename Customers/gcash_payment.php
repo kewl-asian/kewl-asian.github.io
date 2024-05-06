@@ -239,11 +239,15 @@ if (isset($_GET['update_id'])) {
                 $responseLink = $response->getBody();
                 $responseDecoded = json_decode($responseLink, true);
                 $getStatus = $responseDecoded['data']['attributes']['status'];
-
+                
                 if ($getStatus == 'paid') {
                     $displayStatus = "Paid";
+                    $icon = 'success';
+                    $button = 'Proceed';
                 } else {
                     $displayStatus = "Not Paid/Cancelled Payment";
+                    $icon = 'error';
+                    $button = 'Try again';
                 }
                 // Your existing PHP code...
                 // echo '<center>';
@@ -260,27 +264,32 @@ if (isset($_GET['update_id'])) {
                 echo '
                 <script>
                 document.addEventListener("DOMContentLoaded", () => {
-                    const referenceNumber = ' . json_encode($_SESSION["ReferenceNumber"]) . ';
+                    var displayStatus = "' . $displayStatus . '";
+                    var referenceNumber = ' . json_encode($_SESSION["ReferenceNumber"]) . ';
+                    var icon = "' . $icon . '";
+                    var button = "' . $button . '";
                     Swal.fire({
-                        title: "Not Paid/Cancelled Payment",
+                        title: displayStatus,
                         text: "Reference No: " + referenceNumber,
-                        icon: "error",
-                        showCancelButton: true,
+                        icon: icon,
+                        showCancelButton: false,
                         confirmButtonColor: "#3085d6",
                         cancelButtonColor: "#d33",
-                        confirmButtonText: "Try again",
-                        cancelButtonText: "Return to Home Page",
+                        confirmButtonText: button,
                         allowOutsideClick: false,
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            window.history.back();
-                        } else {
-                            window.location.href = "index.php";
-                        }
+                            if (button === "Proceed") {
+                                window.location = "./orders.php";
+                            }
+                            else {
+                                window.history.back();
+                            }
+                        } 
                     });
                 });
                 </script>
-                ';
+                ';                
                 
                 echo "<script>
                 function confirmPurchase(userId) {
