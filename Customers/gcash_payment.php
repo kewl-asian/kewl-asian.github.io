@@ -239,7 +239,7 @@ if (isset($_GET['update_id'])) {
                 $responseLink = $response->getBody();
                 $responseDecoded = json_decode($responseLink, true);
                 $getStatus = $responseDecoded['data']['attributes']['status'];
-                
+                // echo $getStatus;
                 if ($getStatus == 'paid') {
                     $displayStatus = "Paid";
                     $icon = 'success';
